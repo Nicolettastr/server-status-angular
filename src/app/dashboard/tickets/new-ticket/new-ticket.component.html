@@ -1,9 +1,10 @@
-<form>
+<form (ngSubmit)="onSubmit(titleInput, textArea)" #form>
   <app-control label="Title">
-    <input type="text" id="title" />
+    <!-- template variable to use the input elsewhere, other way is the two binding ng property -->
+    <input type="text" id="title" #titleInput #input />
   </app-control>
   <app-control label="Request">
-    <textarea type="text" id="request" rows="3"></textarea>
+    <textarea type="text" id="request" rows="3" #textArea #input></textarea>
   </app-control>
   <p>
     <button appButton>
